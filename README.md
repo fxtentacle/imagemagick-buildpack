@@ -20,7 +20,7 @@ Use `heroku logs -t` to see when compilation is done. It'll start showing dots..
 
 `heroku open`
 
-1. Download all files from /tmp/imagemagick
+1. Download all files from /tmp/imagemagick or download imagemagick.zip
 2. Chmod +x them
 3. put them into `bin/$STACK/` into this buildpack. $STACK shall be the name of your stack as given in the Heroku $STACK variable.
 
