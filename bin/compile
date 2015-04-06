@@ -4,7 +4,7 @@ set -e
 
 BIN_DIR=$(dirname $0)
 mkdir -p "$1/bin/"
-cp "$BIN_DIR/$STACK/*" "$1/bin/"
+cp -a "binaries-$STACK/*" "$1/bin/"
 im_version=$($1/bin/identify -version 2>&1 | tr '\n' ' ' )
 echo "-----> imagemagick-buildpack: Installed to app/bin. ${im_version}"
 
