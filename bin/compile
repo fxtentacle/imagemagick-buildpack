@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+mkdir -p "$1/bin/"
+cp "bin/$STACK/*" "$1/bin/"
+im_version=$($1/bin/identify -version 2>&1 | tr '\n' ' ' )
+echo "-----> imagemagick-buildpack: Installed to app/bin. ${im_version}"
+
+exit 0
