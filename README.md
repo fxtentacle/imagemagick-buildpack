@@ -24,4 +24,4 @@ Use `heroku logs -t` to see when compilation is done. It'll start showing dots..
 2. Chmod +x them
 3. put them into `bin/$STACK/` into this buildpack. $STACK shall be the name of your stack as given in the Heroku $STACK variable.
 
-
+`heroku ps:scale web=0` to turn off the dyno.
