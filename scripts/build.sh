@@ -16,7 +16,7 @@ curl -L $tarball_url | tar xzv
 (
 	cd ImageMagick-*
 	./configure --prefix=/tmp/imagemagick \
-		 --with-gcc-arch=x86-64 \
+		 --with-gcc-arch=x86-64 --disable-openmp \
 		 '--disable-silent-rules' 'CFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' 'CPPFLAGS=-D_FORTIFY_SOURCE=2' 'CXXFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' 'FFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4' 'GCJFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4' 'LDFLAGS=-Wl,-Bsymbolic-functions -Wl,-z,relro' '--with-gs-font-dir=/usr/share/fonts/type1/gsfonts' '--with-magick-plus-plus' '--with-djvu' '--with-wmf' '--without-gvc' '--enable-shared' '--without-dps' '--without-fpx' '--x-includes=/usr/include/X11' '--x-libraries=/usr/lib/X11'
 	
 	make install
