@@ -32,8 +32,8 @@ liblcms2-2
 liblcms2-dev
 libtiff5
 libtiff5-dev
-libjpeg62-turbo
-libjpeg62-turbo-dev
+libjpeg-turbo8
+libjpeg-turbo8-dev
 liblqr-1-0
 liblqr-1-0-dev
 libpng12-0
@@ -52,3 +52,4 @@ libbz2-1.0
 libbz2-dev
 libxml2
 libxml2-dev
+nano
