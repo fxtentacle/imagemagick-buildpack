@@ -62,3 +62,6 @@ libwebp5
 libwebpmux1
 libwebpdemux1
 libwebp-dev
+g++-5
+libstdc++-5
+libstdc++-5-dev
