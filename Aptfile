@@ -68,3 +68,4 @@ libstdc++-5-dev
 x11proto-core-dev
 libfreetype6
 libfreetype6-dev
+libicu-dev
