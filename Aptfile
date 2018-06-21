@@ -58,3 +58,7 @@ libx11-dev
 libxcb1
 libxcb1-dev
 pkg-config
+libwebp5
+libwebpmux1
+libwebpdemux1
+libwebp-dev
