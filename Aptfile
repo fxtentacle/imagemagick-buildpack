@@ -65,3 +65,4 @@ libwebp-dev
 g++-5
 libstdc++-5
 libstdc++-5-dev
+x11proto-core-dev
