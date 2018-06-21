@@ -53,3 +53,7 @@ libbz2-dev
 libxml2
 libxml2-dev
 nano
+libx11-6 
+libx11-dev
+libxcb1
+libxcb1-dev

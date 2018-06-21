@@ -14,12 +14,13 @@ echo "Downloading $tarball_url"
 curl -L $tarball_url | tar xzv
 
 echo '#!/bin/sh' > /tmp/gcc-with-flags.sh
-echo "exec /app/.apt/usr/bin/gcc --sysroot=/app/.apt -I/app/.apt/usr/include -I/app/.apt/usr/include/x86_64-linux-gnu -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu \"\$@\"" >> /tmp/gcc-with-flags.sh
+echo "exec /app/.apt/usr/bin/gcc --sysroot=/app/.apt -I/app/.apt/include  -I/app/.apt/usr/include -I/app/.apt/usr/include/x86_64-linux-gnu -L/app/.apt/lib -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu \"\$@\"" >> /tmp/gcc-with-flags.sh
 chmod +x /tmp/gcc-with-flags.sh
 
 (
 	cd ImageMagick-*
-    export LD_LIBRARY_PATH=/app/.apt/usr/lib:/app/.apt/usr/lib/x86_64-linux-gnu
+    export LD_LIBRARY_PATH=/app/.apt/lib/x86_64-linux-gnu:/app/.apt/usr/lib:/app/.apt/usr/lib/x86_64-linux-gnu
+    export CC=/tmp/gcc-with-flags.sh
 	./configure --prefix=/tmp/imagemagick \
 		 --with-gcc-arch=x86-64 \
 		 '--disable-silent-rules' \
