@@ -30,7 +30,7 @@ export CXX=/tmp/gpp-with-flags.sh
 	./configure --prefix=/tmp/imagemagick \
 		 --with-gcc-arch=x86-64 \
 		 '--disable-silent-rules' \
-		'CFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' \
+		'CFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I/app/.apt/usr/include/libxml2   -I/app/.apt/usr/include/libpng12   -I/app/.apt/usr/include/freetype2 ' \
 		'CPPFLAGS=--sysroot /app/.apt -D_FORTIFY_SOURCE=2' \
 		'CXXFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' \
 		'FFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4' \
