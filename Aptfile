@@ -57,3 +57,4 @@ libx11-6
 libx11-dev
 libxcb1
 libxcb1-dev
+pkg-config
