@@ -1,4 +1,8 @@
-Custom buildpack that will install a more recent ImageMagic into /app/bin on Heroku. Supports cedar-14.
+Custom buildpack that will install a more recent ImageMagic into /app/bin on Heroku. 
+
+Currently using ImageMagick-6.9.11-6 Q16. See build.sh for config flags.
+
+Supports cedar-14, heroku-16, heroku-18.
 
 # How to use
 
