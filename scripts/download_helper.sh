@@ -36,3 +36,4 @@ ln -s libMagickWand-6.Q16.so.6.0.0 binaries-heroku-18/libMagickWand-6.Q16.so.6
 
 rm -r /tmp/imagemagick-dl
 
+git update-index --chmod=+x  binaries-heroku-18/*
