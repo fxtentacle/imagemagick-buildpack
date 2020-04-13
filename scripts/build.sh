@@ -37,8 +37,8 @@ export CXX=/tmp/gpp-with-flags.sh
 		'GCJFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4' \
 		'LDFLAGS=--sysroot /app/.apt -Wl,-Bsymbolic-functions -Wl,-z,relro -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu' \
 		'--with-gs-font-dir=/usr/share/fonts/type1/gsfonts' \
-		'--with-magick-plus-plus' '--with-djvu' '--without-wmf' '--without-gvc' '--enable-shared' '--without-dps' '--without-fpx' '--x-includes=/usr/include/X11' '--x-libraries=/usr/lib/X11' \
-		--with-png --with-webp --with-zlib --without-fftw --without-flif --without-heic 
+		'--with-magick-plus-plus' '--with-djvu' '--without-wmf' '--without-gvc' '--enable-shared' '--without-dps' '--without-fpx' \
+		--with-png --with-webp --with-zlib --without-fftw --without-flif --without-heic --without-x
 	#  did test. it's faster without --disable-openmp
 	
 	make install
