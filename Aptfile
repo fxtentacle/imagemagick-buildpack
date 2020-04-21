@@ -36,8 +36,8 @@ libjpeg-turbo8
 libjpeg-turbo8-dev
 liblqr-1-0
 liblqr-1-0-dev
-libpng12-0
-libpng12-dev
+libpng-dev 
+libpng16-16 
 libdjvulibre21
 libdjvulibre-dev
 libfontconfig1
@@ -46,6 +46,7 @@ libfreetype6
 libfreetype6-dev
 libwmf0.2-7
 libwmf-dev
+libwmf-bin
 liblzma5
 liblzma-dev
 libbz2-1.0
