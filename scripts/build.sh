@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tarball_url=http://www.imagemagick.org/download/ImageMagick-6.9.11-6.tar.gz
+tarball_url=http://www.imagemagick.org/download/ImageMagick-6.9.11-7.tar.gz
 temp_dir=$(mktemp -d /tmp/compile.XXXXXXXXXX)
 
 echo "Serving files from /tmp on $PORT"
@@ -27,18 +27,7 @@ export CXX=/tmp/gpp-with-flags.sh
 	cd ImageMagick-*
     export LD_LIBRARY_PATH=/app/.apt/lib/x86_64-linux-gnu:/app/.apt/usr/lib:/app/.apt/usr/lib/x86_64-linux-gnu
     export PKG_CONFIG_PATH=/app/.apt/usr/lib/x86_64-linux-gnu/pkgconfig
-	./configure --prefix=/tmp/imagemagick \
-		 --with-gcc-arch=x86-64 \
-		 '--disable-silent-rules' \
-		'CFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I/app/.apt/usr/include/libxml2   -I/app/.apt/usr/include/libpng12   -I/app/.apt/usr/include/freetype2 ' \
-		'CPPFLAGS=--sysroot /app/.apt -D_FORTIFY_SOURCE=2' \
-		'CXXFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security' \
-		'FFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4' \
-		'GCJFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4' \
-		'LDFLAGS=--sysroot /app/.apt -Wl,-Bsymbolic-functions -Wl,-z,relro -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu' \
-		'--with-gs-font-dir=/usr/share/fonts/type1/gsfonts' \
-		'--with-magick-plus-plus' '--with-djvu' '--without-wmf' '--without-gvc' '--enable-shared' '--without-dps' '--without-fpx' \
-		--with-png --with-webp --with-zlib --without-fftw --without-flif --without-heic --without-x
+	./configure --prefix=/tmp/imagemagick --with-gcc-arch=x86-64   '--disable-silent-rules'  'CFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I/app/.apt/usr/include/libxml2   -I/app/.apt/usr/include/libpng12   -I/app/.apt/usr/include/freetype2 '  'CPPFLAGS=--sysroot /app/.apt -D_FORTIFY_SOURCE=2'  'CXXFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security'  'FFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4'  'GCJFLAGS=--sysroot /app/.apt -g -O2 -fstack-protector --param=ssp-buffer-size=4'  'LDFLAGS=--sysroot /app/.apt -Wl,-Bsymbolic-functions -Wl,-z,relro -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu'  '--with-gs-font-dir=/usr/share/fonts/type1/gsfonts'  '--with-magick-plus-plus' '--with-djvu' '--without-wmf' '--without-gvc' '--enable-shared' '--without-dps' '--without-fpx'  --with-png --with-webp --with-zlib --without-fftw --without-flif --without-heic --without-x
 	#  did test. it's faster without --disable-openmp
 	
 	make install
