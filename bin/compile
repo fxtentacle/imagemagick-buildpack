@@ -4,6 +4,10 @@ set -e
 
 mkdir -p "$1/bin/"
 cp -a binaries-$STACK/* "$1/bin/"
+
+mkdir -p "$1/.magick/"
+cp "binaries-$STACK/delegates.xml" "$1/.magick/delegates.xml"
+
 im_version=$(LD_LIBRARY_PATH=$1/bin:$1/.apt/lib/x86_64-linux-gnu:$1/.apt/usr/lib:$1/.apt/usr/lib/x86_64-linux-gnu $1/bin/identify -version 2>&1 | tr '\n' ' ' )
 echo "-----> imagemagick-buildpack: Installed to app/bin. ${im_version}"
 
