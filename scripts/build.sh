@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tarball_url=http://www.imagemagick.org/download/ImageMagick-6.9.11-31.tar.gz
+tarball_url=https://download.imagemagick.org/archive/ImageMagick-6.9.12-76.tar.gz
 temp_dir=$(mktemp -d /tmp/compile.XXXXXXXXXX)
 
 echo "Serving files from /tmp on $PORT"
