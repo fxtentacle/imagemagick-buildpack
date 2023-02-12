@@ -68,7 +68,8 @@ libstdc++-6-dev
 x11proto-core-dev
 libfreetype6
 libfreetype6-dev
-libicu60
+icu-devtools
+libicu66
 libicu-dev
 libxau6 
 libxau-dev
