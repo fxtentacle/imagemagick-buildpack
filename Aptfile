@@ -63,8 +63,8 @@ libwebpmux3
 libwebpdemux2
 libwebp-dev
 g++-9
-libstdc++-6
-libstdc++-6-dev
+libstdc++-9
+libstdc++-9-dev
 x11proto-core-dev
 libfreetype6
 libfreetype6-dev
