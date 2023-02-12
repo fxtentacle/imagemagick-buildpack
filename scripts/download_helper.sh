@@ -14,26 +14,27 @@ cd -
 # mv  /tmp/imagemagick-dl/tmp/imagemagick/lib/libMagick* /app/bin
 
 
-mkdir -p /gitosis/imagemagick-buildpack/binaries-heroku-18
-rm -r /gitosis/imagemagick-buildpack/binaries-heroku-18/*
-mv  /tmp/imagemagick-dl/tmp/imagemagick/bin/* /gitosis/imagemagick-buildpack/binaries-heroku-18
-mv  /tmp/imagemagick-dl/tmp/imagemagick/lib/libMagick* /gitosis/imagemagick-buildpack/binaries-heroku-18
+mkdir -p /gitosis/imagemagick-buildpack/binaries-heroku-20
+rm -r /gitosis/imagemagick-buildpack/binaries-heroku-20/*
+mv  /tmp/imagemagick-dl/tmp/imagemagick/bin/* /gitosis/imagemagick-buildpack/binaries-heroku-20
+mv  /tmp/imagemagick-dl/tmp/imagemagick/lib/libMagick* /gitosis/imagemagick-buildpack/binaries-heroku-20
 
-rm binaries-heroku-18/libMagick++-6.Q16.so
-ln -s libMagick++-6.Q16.so.8.0.0 binaries-heroku-18/libMagick++-6.Q16.so
-rm binaries-heroku-18/libMagick++-6.Q16.so.8
-ln -s libMagick++-6.Q16.so.8.0.0 binaries-heroku-18/libMagick++-6.Q16.so.8
+rm binaries-heroku-20/libMagick++-6.Q16.so
+ln -s libMagick++-6.Q16.so.9.0.0 binaries-heroku-20/libMagick++-6.Q16.so
+rm binaries-heroku-20/libMagick++-6.Q16.so.9
+ln -s libMagick++-6.Q16.so.9.0.0 binaries-heroku-20/libMagick++-6.Q16.so.9
 
-rm binaries-heroku-18/libMagickCore-6.Q16.so
-ln -s libMagickCore-6.Q16.so.6.0.0 binaries-heroku-18/libMagickCore-6.Q16.so
-rm binaries-heroku-18/libMagickCore-6.Q16.so.6
-ln -s libMagickCore-6.Q16.so.6.0.0 binaries-heroku-18/libMagickCore-6.Q16.so.6
+rm binaries-heroku-20/libMagickCore-6.Q16.so
+ln -s libMagickCore-6.Q16.so.7.0.0 binaries-heroku-20/libMagickCore-6.Q16.so
+rm binaries-heroku-20/libMagickCore-6.Q16.so.7
+ln -s libMagickCore-6.Q16.so.7.0.0 binaries-heroku-20/libMagickCore-6.Q16.so.7
 
-rm binaries-heroku-18/libMagickWand-6.Q16.so
-ln -s libMagickWand-6.Q16.so.6.0.0 binaries-heroku-18/libMagickWand-6.Q16.so
-rm binaries-heroku-18/libMagickWand-6.Q16.so.6
-ln -s libMagickWand-6.Q16.so.6.0.0 binaries-heroku-18/libMagickWand-6.Q16.so.6
+rm binaries-heroku-20/libMagickWand-6.Q16.so
+ln -s libMagickWand-6.Q16.so.7.0.0 binaries-heroku-20/libMagickWand-6.Q16.so
+rm binaries-heroku-20/libMagickWand-6.Q16.so.7
+ln -s libMagickWand-6.Q16.so.7.0.0 binaries-heroku-20/libMagickWand-6.Q16.so.7
 
 rm -r /tmp/imagemagick-dl
 
-git update-index --chmod=+x  binaries-heroku-18/*
+git add binaries-heroku-20/
+git update-index --chmod=+x  binaries-heroku-20/*
