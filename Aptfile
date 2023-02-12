@@ -12,7 +12,7 @@ zlib1g
 gcc
 gcc-9
 gcc-9-base
-libmpfr4
+libmpfr6
 libmpfr-dev
 libmpc3
 libgmp3-dev
@@ -21,7 +21,7 @@ libgmp-dev
 libmpc-dev
 flex
 bison
-libisl15
+libisl22
 libisl-dev
 make
 zlib1g
@@ -75,3 +75,6 @@ libxau6
 libxau-dev
 libxdmcp6 
 libxdmcp-dev
+libgmp10
+libgmp-dev
+cpp-9
