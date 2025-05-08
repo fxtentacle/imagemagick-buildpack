@@ -14,12 +14,12 @@ echo "Downloading $tarball_url"
 curl -L $tarball_url | tar xzv
 
 echo '#!/bin/sh' > /tmp/gcc-with-flags.sh
-echo "exec /app/.apt/usr/bin/gcc-9 --sysroot=/app/.apt -I/app/.apt/include  -I/app/.apt/usr/include -I/app/.apt/usr/include/x86_64-linux-gnu -L/app/.apt/lib -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu \"\$@\"" >> /tmp/gcc-with-flags.sh
+echo "exec gcc-11 --sysroot=/app/.apt -I/app/.apt/include  -I/app/.apt/usr/include -I/app/.apt/usr/include/x86_64-linux-gnu -L/app/.apt/lib -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu \"\$@\"" >> /tmp/gcc-with-flags.sh
 chmod +x /tmp/gcc-with-flags.sh
 export CC=/tmp/gcc-with-flags.sh
 
 echo '#!/bin/sh' > /tmp/gpp-with-flags.sh
-echo "exec /app/.apt/usr/bin/g++-9 --sysroot=/app/.apt -I/app/.apt/include  -I/app/.apt/usr/include -I/app/.apt/usr/include/x86_64-linux-gnu -L/app/.apt/lib -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu \"\$@\"" >> /tmp/gpp-with-flags.sh
+echo "exec g++-11 --sysroot=/app/.apt -I/app/.apt/include  -I/app/.apt/usr/include -I/app/.apt/usr/include/x86_64-linux-gnu -L/app/.apt/lib -L/app/.apt/usr/lib -L/app/.apt/usr/lib/x86_64-linux-gnu \"\$@\"" >> /tmp/gpp-with-flags.sh
 chmod +x /tmp/gpp-with-flags.sh
 export CXX=/tmp/gpp-with-flags.sh
 
