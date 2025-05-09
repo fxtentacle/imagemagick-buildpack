@@ -40,4 +40,5 @@ RUN make install
 
 RUN mkdir -p /tmp/output &&\
     mv /tmp/imagemagick/bin/* /tmp/output &&\
-    mv /tmp/imagemagick/lib/libMagick* /tmp/output
+    mv /tmp/imagemagick/lib/libMagick* /tmp/output &&\
+    mv /tmp/imagemagick/etc/ImageMagick-6/delegates.xml /tmp/output
