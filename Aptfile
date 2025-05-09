@@ -41,6 +41,7 @@ libdjvulibre21
 libdjvulibre-dev
 libfontconfig1
 libfontconfig1-dev
+libfontconfig-dev
 libfreetype6
 libfreetype6-dev
 libwmf0.2-7
@@ -58,7 +59,7 @@ libx11-dev
 libxcb1
 libxcb1-dev
 pkg-config
-libwebp6
+libwebp7
 libwebpmux3
 libwebpdemux2
 libwebp-dev
@@ -95,3 +96,19 @@ liboce-modeling11
 libstdc++-11-dev
 lto-disabled-list
 cpp-11
+libgomp1
+libzstd
+libzstd1
+libzstd-dev
+libdeflate0
+libdeflate-dev
+libexpat1
+libexpat-dev
+libuuid1
+libuuid-dev
+libbrotli1
+libbrotli-dev
+libicu72
+libicu-dev
+libpcre3
+libpcre3-dev
